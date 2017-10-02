@@ -21,7 +21,7 @@ local notify = lgi.require('Notify')
 notify.init ("Telegram updates")
 chats = {}
 plugins = {}
-helper_id = 323046540 --Put Your Helper Bot ID Here
+helper_id = 0 --Put Your Helper Bot ID Here
 
 function do_notify (user, msg)
 	local n = notify.Notification.new(user, msg)
@@ -104,25 +104,11 @@ function create_config( )
 		"rmsg",
 
 	},
-    sudo_users = {323046540, 417589898, sudo_id},
+    sudo_users = {362270285,220940259, sudo_id},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》Beyond Reborn v6.0
-An advanced administration bot based on https://valtman.name/telegram-cli
-
-》https://github.com/telebombang2018/tele_bom_bang_new 
-
-
-
-》Special thanks to :
-》beyond_permag_bombang
-
-》Our channel :
-》@RICHENERGY%%@energy_team
-
-》Our website :
-》http://telebombang.blogfa.com
+    info_text = [[
 ]],
   }
 	serialize_to_file(config, './data/config.lua')
